@@ -106,7 +106,7 @@ function App() {
 
       <div className="p-5 border-t-2 border-green-500 w-full">
         <form className="flex w-full" action={action}>
-          <input ref={inputFocus} onChange={(e): void => setMessage(e.target.value)} name="message" type="text" placeholder="Chat with ai" className="bg-white text-[20px] border-2 border-green-400 focus:outline-emerald-600 rounded-xl p-4 w-full"/>
+          <input ref={inputFocus} onChange={(e: React.ChangeEvent<HTMLInputElement>): void => setMessage(e.target.value)} name="message" type="text" placeholder="Chat with ai" className="bg-white text-[20px] border-2 border-green-400 focus:outline-emerald-600 rounded-xl p-4 w-full"/>
           <button disabled={pending} onClick={sendMessageChats}>
             <i className={`ri-send-ins-line ${pending? "bg-green-300":"bg-green-500 hover:bg-green-600"} text-white rounded-2xl p-4 text-2xl ml-3 mr-2`}></i>
           </button>
